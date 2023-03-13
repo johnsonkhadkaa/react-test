@@ -1,22 +1,8 @@
 import React from 'react'
+import Resturant from './component/Basics/Resturant'
 
 const App = () => {
-  return (
-    <div>
-      <John />
-      <h1>Welcome to E-Loksewa Online Platform</h1> 
-       <John />
-    </div>
-    
-  )
-}
-
-const John = () => {
-  return(
-    <div>
-      Mr. Johnson Khadka
-    </div>
-  )
+  return < Resturant/>
 }
 
 export default App
