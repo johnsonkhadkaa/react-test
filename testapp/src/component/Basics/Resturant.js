@@ -25,7 +25,7 @@ const Resturant = () => {
     if(category === "ALL"){
        return setMenuData(Menu)
     }
-
+    
     const updatedList = Menu.filter((curElem)=>{
        return curElem.category === category
     })
