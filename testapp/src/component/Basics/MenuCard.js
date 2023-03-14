@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const MenuCard = ({ menuData }) => {
     return (
         <>
@@ -17,7 +18,7 @@ const MenuCard = ({ menuData }) => {
                                         <h2 className='card-title' >{currElem.name}</h2>
                                         <span className='card-description subtle' >{description}</span>
                                         <div className='card-read'>Read</div>
-                                        {/* <img src='https://t3.ftcdn.net/jpg/02/02/21/78/240_F_202217885_SR8TwNqgjgSGFKGBe0LNGki8DccGvJXE.jpg' alt='images' className='card-media' /> */}
+                                        <img src={image} alt='images' className='card-media' />
                                         <span className='card-tag subtle'>Order Now</span>
                                     </div>
                                 </div>
