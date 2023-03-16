@@ -3,6 +3,7 @@ import './style.css'
 import Menu from './menuApi'
 import MenuCard from './MenuCard'
 import Navbar from './Navbar'
+import UseState from '../Hooks/UseState'
 
 const uniqueList = [
   ...new Set(
@@ -34,6 +35,7 @@ const Resturant = () => {
 
   return (
        <>
+       < UseState />
   <Navbar filterItem = {filterItem}  menuList = {menuList}/>
   <MenuCard menuData = {menuData} />
     </>

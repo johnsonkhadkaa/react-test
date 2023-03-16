@@ -213,3 +213,8 @@
     opacity: 1;
     transform: translatey(-2px);
   }
+  p{
+    color:blue;
+    text-align: center;
+    
+  }
