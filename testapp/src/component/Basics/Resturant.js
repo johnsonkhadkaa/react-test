@@ -35,7 +35,7 @@ const Resturant = () => {
 
   return (
        <>
-       < UseState />
+       {/* < UseState /> */}
   <Navbar filterItem = {filterItem}  menuList = {menuList}/>
   <MenuCard menuData = {menuData} />
     </>

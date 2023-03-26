@@ -17,7 +17,7 @@ const UseState = () => {
     <span></span>
     INCR
     </div>
-    <div class='btn-group__item' onClick={() => setCount(count - 1 )}>
+    <div class='btn-group__item' onClick={() => count > 0 ? setCount(count - 1 ) : setCount(0)}>
     <span></span>
     <span></span>
     <span></span>
