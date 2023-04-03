@@ -3,8 +3,16 @@ import './style.css'
 
 const Todo = () => {
 
-    const [inputData , setInputData] = useState(" ")
+    const [inputData, setInputData] = useState(" ")
+    const [items, setItems] = useState([])
 
+    const addItem = () => {
+        if (!inputData) {
+            alert("Please add the items.")
+        } else {
+            setItems([...items, inputData])
+        }
+    }
     return (
         <>
             <div className='main-div'>
@@ -16,23 +24,26 @@ const Todo = () => {
                     <div className='addItems'>
                         <input
                             type="text"
-                            placeholder='✍ Add Item'
-                            className='form-control'
-                            value ={inputData}
-                            onChange = {(event)=> setInputData(event.target.value)}
+                            placeholder='✍ Add Item' className='form-control' value={inputData}
+                            onChange={(event) => setInputData(event.target.value)}
                         />
-                        <i className="fa fa-plus" add-btn></i>
+                        <i className="fa fa-plus" add-btn onClick={addItem} ></i>
                     </div>
                     {/* Show our Items */}
-                          <div className='showItems'>
-                            <div className='eachItem'>
-                                <h3>apple</h3>
-                                <div className='todo-btn'>
-                                <i className="far fa-edit" add-btn></i>
-                                <i className="far fa-trash-alt" add-btn></i>
+                    <div className='showItems'>
+                        {items.map((currElem, index) => {
+                            return (
+                                <div className='eachItem'>
+                                    <h3>{currElem}</h3>
+                                    <div className='todo-btn'>
+                                        <i className="far fa-edit" add-btn></i>
+                                        <i className="far fa-trash-alt" add-btn></i>
+                                    </div>
                                 </div>
-                            </div>
-                          </div>
+                            )
+                        })}
+
+                    </div>
 
 
                     {/* Remove Items */}
