@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react'
+import './style.css'
 
 // const IncrementFunc = (curElem)=> {
 //     return setCount(curElem + 1)
