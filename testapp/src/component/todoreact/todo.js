@@ -1,10 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './style.css'
+
+const getLocalData = () => {
+    const lists = localStorage.getItem("mytodoList")
+    if(lists){
+        return JSON.parse(lists)
+    }else{
+        return []
+    }
+}
+
 
 const Todo = () => {
 
     const [inputData, setInputData] = useState(" ")
-    const [items, setItems] = useState([])
+    const [items, setItems] = useState(getLocalData())
 
     // To add the Items
     const addItem = () => {
@@ -34,12 +44,18 @@ const Todo = () => {
      }
 
 
+// UseEffect hooks for automatic local storage
+useEffect(() => {
+    localStorage.setItem("mytodoList" , JSON.stringify(items))
+}, [items])
+ 
+
     return (
         <>
             <div className='main-div'>
                 <div className='child-div'>
                     <figure>
-                        <img src='./images/todo.svg' alt='todologo' />
+                        <img src='./images/todo.svg' alt='todologo'/>
                         <figcaption>Add Your List Here ✌</figcaption>
                     </figure>
                     <div className='addItems'>
