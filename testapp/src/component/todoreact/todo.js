@@ -22,7 +22,20 @@ const Todo = () => {
     const addItem = () => {
         if (!inputData) {
             alert("Please add the items.")
-        } else {
+        }else if(inputData && toggleButton) {
+            setItems (
+               items.map((currElem)=> {
+                     if(currElem.id === isEditItem){
+                        return { ...currElem , name : inputData}
+                     }
+                     return currElem
+               }) 
+            )
+            setInputData("")
+            setIsEditItem(null)
+            setToggleButton(false)
+        }
+         else {
            const myNewInputData = {
                  id : new Date().getTime().toString(),
                  name : inputData,
@@ -31,6 +44,7 @@ const Todo = () => {
             setInputData("")
         }
     }
+  
 
 // To edit the items
    
