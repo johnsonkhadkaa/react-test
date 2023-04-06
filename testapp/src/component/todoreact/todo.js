@@ -15,6 +15,8 @@ const Todo = () => {
 
     const [inputData, setInputData] = useState(" ")
     const [items, setItems] = useState(getLocalData())
+    const[isEditItem ,setIsEditItem] = useState("")
+    const[toggleButton , setToggleButton] = useState(false)
 
     // To add the Items
     const addItem = () => {
@@ -29,6 +31,18 @@ const Todo = () => {
             setInputData("")
         }
     }
+
+// To edit the items
+   
+const editItem = (index) => {
+   const item_todo_edited = items.find((currElem)=>{
+    return currElem.id === index
+   })
+   setInputData(item_todo_edited.name)
+   setIsEditItem(index)
+   setToggleButton(true)
+}
+
 
 // To delete the items
     const deleteItem = (index) => {
@@ -66,7 +80,8 @@ useEffect(() => {
                             value={inputData}
                             onChange={(event) => setInputData(event.target.value)}
                         />
-                        <i className="fa fa-plus add-btn" onClick={addItem} ></i>
+                        {toggleButton ?<i className="far fa-edit add-btn" onClick={addItem} ></i> : <i className="fa fa-plus add-btn" onClick={addItem} ></i> }
+                        
                     </div>
                     {/* Show our Items */}
                     <div className='showItems'>
@@ -75,7 +90,7 @@ useEffect(() => {
                                 <div className='eachItem' key={currElem.id}>
                                     <h3>{currElem.name}</h3>
                                     <div className='todo-btn'>
-                                        <i className="far fa-edit add-btn "></i>
+                                        <i className="far fa-edit add-btn " onClick={()=>editItem(currElem.id)}></i>
                                         <i className="far fa-trash-alt add-btn" onClick={()=>deleteItem(currElem.id)} ></i>
                                     </div>
                                 </div>
