@@ -1,5 +1,6 @@
 import React from 'react'
-import Todo from './component/todoreact/todo'
+import Counter from './component/Counter/Counter'
+// import Todo from './component/todoreact/todo'
 // import UseReducer from './component/Hooks/useReducer'
 // import Resturant from './component/Basics/Resturant'
 // import UseState from './component/Hooks/UseState'
@@ -7,7 +8,8 @@ import Todo from './component/todoreact/todo'
 
 const App = () => {
 
-  return < Todo/>
+  return < Counter />
+  // return < Todo/>
   // return < UseReducer/>
   // return < UseState/>
   //  return < UseEffect/>
