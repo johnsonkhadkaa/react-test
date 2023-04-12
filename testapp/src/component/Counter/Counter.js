@@ -6,15 +6,12 @@ const Counter = () => {
     <>
       <div >
         <div className='child-div'>
-          <div className='btn effect04'><button>Increment</button></div>
-          <i className="far fa-plus add-btn" ></i>
-          <div className='btn effect04'><button>Decrement</button></div>
-          <i className="far fa-minus add-btn" ></i>
-
-          <div className='todo-btn'>
-            <i className="far fa-plus add-btn "></i>
-            <i className="far fa-trash-alt add-btn" ></i>
-          </div>
+          <div className='card-read:after btn-group__item'><button>Increment</button></div>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <div className='card-read:after btn-group__item'><button>Decrement</button></div>
         </div>
       </div>
     </>
