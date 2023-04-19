@@ -1,5 +1,6 @@
 import React from 'react'
-import Counter from './component/Counter/Counter'
+import Display from './component/Display/display'
+// import Counter from './component/Counter/Counter'
 // import Todo from './component/todoreact/todo'
 // import UseReducer from './component/Hooks/useReducer'
 // import Resturant from './component/Basics/Resturant'
@@ -8,7 +9,8 @@ import Counter from './component/Counter/Counter'
 
 const App = () => {
 
-  return < Counter />
+  return < Display />
+  // return < Counter />
   // return < Todo/>
   // return < UseReducer/>
   // return < UseState/>
