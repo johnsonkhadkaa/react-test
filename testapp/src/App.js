@@ -1,6 +1,6 @@
 import React from 'react'
 import Display from './component/Display/display'
-// import Counter from './component/Counter/Counter'
+//  import Counter from './component/Counter/Counter'
 // import Todo from './component/todoreact/todo'
 // import UseReducer from './component/Hooks/useReducer'
 // import Resturant from './component/Basics/Resturant'
