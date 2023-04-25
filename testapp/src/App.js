@@ -9,14 +9,16 @@ import Display from './component/Display/display'
 
 const App = () => {
 
-  return < Display />
-  // return < Counter />
-  // return < Todo/>
-  // return < UseReducer/>
-  // return < UseState/>
-  //  return < UseEffect/>
-  //  return < Resturant/>
-
+  return(
+    < Display />
+    // return < Counter />
+    // return < Todo/>
+    // return < UseReducer/>
+    // return < UseState/>
+    //  return < UseEffect/>
+    //  return < Resturant/>
+  )
+  
 }
 
 export default App

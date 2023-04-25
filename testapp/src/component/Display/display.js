@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
+import Headers from '../Header/Headers'
 import './style.css'
-
-
 
 
 const Display = () => {
@@ -20,6 +19,7 @@ const Display = () => {
 
     return (
         <>
+        < Headers />
             <div className='main-div'>
                 <div className='child-div'>
                     <figure>
@@ -60,6 +60,7 @@ const Display = () => {
                     </div>
                 </div>
             </div>
+            < Headers />
         </>
     )
 }
